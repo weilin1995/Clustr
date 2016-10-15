@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lc5-M6-kQS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Clustr Map View Controller-->
+        <scene sceneID="OSO-ZG-4bc">
+            <objects>
+                <viewController id="lc5-M6-kQS" customClass="ClustrMapViewController" customModule="Clustr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8H7-jb-pjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="vkp-AI-CCU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nzu-WL-vvI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-OI-fHQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lx8-MO-SRN" appends="YES" id="yZa-gR-weE"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9gZ-OI-fHQ" firstAttribute="top" secondItem="nzu-WL-vvI" secondAttribute="top" id="005-pQ-vHN"/>
+                            <constraint firstItem="9gZ-OI-fHQ" firstAttribute="leading" secondItem="nzu-WL-vvI" secondAttribute="leading" id="SuC-qE-o44"/>
+                            <constraint firstAttribute="trailing" secondItem="9gZ-OI-fHQ" secondAttribute="trailing" id="kTX-in-Hkc"/>
+                            <constraint firstItem="9gZ-OI-fHQ" firstAttribute="bottom" secondItem="vkp-AI-CCU" secondAttribute="top" id="ylf-II-Q9U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="9gZ-OI-fHQ" id="MeJ-aN-yoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysa-bA-pLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Lx8-MO-SRN">
+                    <connections>
+                        <action selector="panMapView:" destination="lc5-M6-kQS" id="oUc-LT-RVV"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-169" y="-229"/>
+        </scene>
+    </scenes>
+</document>
